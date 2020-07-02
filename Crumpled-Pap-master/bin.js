@@ -8,6 +8,19 @@ class Bin{
         this.width = width;
         this.height = height;
         World.add(world,this.body);
+
+        
+        }
+        display(){
+            
+            strokeWeight(3);
+            stroke("red");
+            fill("red");
+                        
+            rectMode(CENTER);
+            rect(this.body.position.x,this.body.position.y,this.width,this.height);
+            
+            
                
         }
     }
