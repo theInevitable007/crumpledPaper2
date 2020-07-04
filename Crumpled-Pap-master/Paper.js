@@ -3,10 +3,10 @@ class Paper {
     constructor(x,y,radius){
         var options = {
             
-            isStatic : false
-           // restitution : 0.3,
-            //friction : 0.5,
-            //density : 1.2
+             isStatic : false,
+             restitution : 0.3,
+             friction : 0.5,
+             density : 1.2
         }
         this.body = Bodies.circle(x,y,radius,options);
         this.radius = radius;
@@ -15,14 +15,14 @@ class Paper {
                
     }
     display(){
-        strokeWeight(2.5);
-        fill("purple");
-        stroke("purple");
-
+        
        push()
        translate (this.body.position.x,this.body.position.y);
+       strokeWeight(2.5);
+        fill("purple");
+        stroke("purple");
        
-        rotate(this.body.angle);     
+        //rotate(this.body.angle);     
         ellipseMode(RADIUS);
         ellipse(0,0,this.radius,this.radius);
 
