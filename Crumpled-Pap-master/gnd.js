@@ -12,16 +12,14 @@ class Gnd{
        
       }
       display(){
+        push()
           strokeWeight(3);
-          stroke("green");
-          fill("green");
+          stroke("brown");
+          fill("gbrown");
 
           rectMode(CENTER);
           rect(this.body.position.x,this.body.position.y,this.width,this.height);
-          
-      //  push();
-       // translate(this.body.position.x, this.body.position.y);
-      //  rotate(angle);
-      //  pop();
+       pop();
+      
       }
     } 
